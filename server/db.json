@@ -1,0 +1,26 @@
+{
+  "products": [
+    {
+      "name": "Test2",
+      "size": [
+        "w40",
+        "w36",
+        "w46",
+        "w44"
+      ],
+      "color": [
+        "#CBA13E",
+        "#F3ECE2",
+        "#292A2D",
+        "#666689",
+        "#C2BEB6",
+        "#2B9FA7",
+        "#73513C"
+      ],
+      "price": 200,
+      "discount": 10,
+      "image": "https://robohash.org/1aadaaaa",
+      "id": 3
+    }
+  ]
+}

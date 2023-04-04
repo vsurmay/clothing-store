@@ -4,8 +4,17 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import Admin from "./pages/Admin/Admin";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { getProducts } from "./redux/actions/productsAction";
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getProducts());
+  }, []);
+
   const menuItems = [
     {
       text: "home",
