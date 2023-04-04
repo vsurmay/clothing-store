@@ -1,6 +1,7 @@
 import {
   ADED_PRODUCTS,
   DELETE_PRODUCTS,
+  EDIT_PRODUCTS,
   GET_PRODUCTS,
 } from "../types/products";
 import axios from "axios";
@@ -35,6 +36,20 @@ export const deleteProducts = (product) => {
       dispatch({
         type: DELETE_PRODUCTS,
         payload: product,
+      })
+    );
+  };
+};
+
+export const editProducts = (product, id) => {
+  return (dispatch) => {
+    axios.put(`${URL}/${id}`, product).then((response) =>
+      dispatch({
+        type: EDIT_PRODUCTS,
+        payload: {
+          id,
+          data: response.data,
+        },
       })
     );
   };

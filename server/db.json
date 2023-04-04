@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "name": "Test2",
+      "name": "Test2Edit",
       "size": [
         "w40",
         "w36",
@@ -9,18 +9,35 @@
         "w44"
       ],
       "color": [
-        "#CBA13E",
         "#F3ECE2",
-        "#292A2D",
         "#666689",
         "#C2BEB6",
         "#2B9FA7",
-        "#73513C"
+        "#971E34",
+        "#292A2D"
       ],
       "price": 200,
       "discount": 10,
       "image": "https://robohash.org/1aadaaaa",
       "id": 3
+    },
+    {
+      "name": "Test3Edit",
+      "size": [
+        "osfa",
+        "w31",
+        "w38",
+        "w40"
+      ],
+      "color": [
+        "#292A2D",
+        "#971E34",
+        "#24426A"
+      ],
+      "price": 1002,
+      "discount": 2,
+      "image": "https://robohash.org/a",
+      "id": 4
     }
   ]
 }

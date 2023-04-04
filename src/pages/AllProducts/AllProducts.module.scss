@@ -21,3 +21,20 @@
     display: flex;
     gap: 20px;
 }
+
+.form {
+    max-width: 500px;
+    margin-right: 400px;
+
+    .group {
+        margin-top: 5px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 10px;
+    }
+
+    .checkbox {
+        display: flex;
+        gap: 5px;
+    }
+}

@@ -28,17 +28,17 @@ const productsReducer = (state = defaultValues, action) => {
         data: state.data.filter((el) => el.id !== action.payload.id),
       };
 
-    // case EDIT_PRODUCTS:
-    //   return {
-    //     ...state,
-    //     data: state.data.map((el) => {
-    //       if (el.id === payload.id) {
-    //         return payload.data;
-    //       } else {
-    //         return el;
-    //       }
-    //     }),
-    //   };
+    case EDIT_PRODUCTS:
+      return {
+        ...state,
+        data: state.data.map((el) => {
+          if (el.id === action.payload.id) {
+            return action.payload.data;
+          } else {
+            return el;
+          }
+        }),
+      };
 
     default:
       return state;
