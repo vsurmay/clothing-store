@@ -7,6 +7,9 @@ import Admin from "./pages/Admin/Admin";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { getProducts } from "./redux/actions/productsAction";
+import FillButton from "./components/UI/Buttons/FillButton";
+import OutLineButton from "./components/UI/Buttons/OutLineButton";
+import { EditOutlined } from "@ant-design/icons";
 
 function App() {
   const dispatch = useDispatch();
@@ -43,6 +46,10 @@ function App() {
       <Header menuItems={menuItems} />
 
       <Main>
+        <FillButton>Test Button</FillButton>
+        <OutLineButton>
+          <EditOutlined /> Test Button
+        </OutLineButton>
         <Admin />
       </Main>
 
