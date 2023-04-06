@@ -10,6 +10,7 @@ import { getProducts } from "./redux/actions/productsAction";
 import FillButton from "./components/UI/Buttons/FillButton";
 import OutLineButton from "./components/UI/Buttons/OutLineButton";
 import { EditOutlined } from "@ant-design/icons";
+import Slider from "./components/Slider/Slider";
 
 function App() {
   const dispatch = useDispatch();
@@ -47,6 +48,7 @@ function App() {
 
       <Main>
         <Admin />
+        <Slider />
       </Main>
 
       <Footer />
