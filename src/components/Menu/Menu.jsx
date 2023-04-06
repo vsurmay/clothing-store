@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./Menu.module.scss";
+import { SearchOutlined } from "@ant-design/icons";
 
 const Menu = ({ menuItems }) => {
   return (
@@ -18,7 +19,10 @@ const Menu = ({ menuItems }) => {
           </a>
         ))}
       </nav>
-      <div>Search</div>
+      <button className={classes.search}>
+        <SearchOutlined style={{ fontSize: "20px" }} />
+        Search
+      </button>
     </div>
   );
 };
