@@ -5,7 +5,7 @@ import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteProducts } from "../../redux/actions/productsAction";
 import { useState } from "react";
-import AllProductsForm from "./AllProductsForm";
+import AllProductsForm from "../../forms/AllProductsForm";
 import OutLineButton from "../../components/UI/Buttons/OutLineButton";
 
 const AllProducts = () => {
@@ -16,9 +16,11 @@ const AllProducts = () => {
   const [editProduct, setEditProduct] = useState("");
 
   const [open, setOpen] = useState(false);
+
   const showDrawer = () => {
     setOpen(true);
   };
+
   const onClose = () => {
     setOpen(false);
   };
@@ -91,6 +93,7 @@ const AllProducts = () => {
       },
     },
   ];
+
   return (
     <>
       <Table columns={columns} dataSource={data} />

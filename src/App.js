@@ -46,10 +46,6 @@ function App() {
       <Header menuItems={menuItems} />
 
       <Main>
-        <FillButton>Test Button</FillButton>
-        <OutLineButton>
-          <EditOutlined /> Test Button
-        </OutLineButton>
         <Admin />
       </Main>
 

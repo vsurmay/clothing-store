@@ -1,6 +1,7 @@
 .form {
 
     .group {
+        max-width: 100px;
         margin-top: 5px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -9,6 +10,8 @@
 
     .checkbox {
         display: flex;
+        align-items: center;
         gap: 5px;
+        border-radius: 5px;
     }
 }
