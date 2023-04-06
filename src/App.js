@@ -47,7 +47,7 @@ function App() {
       <Header menuItems={menuItems} />
 
       <Main>
-        <Admin />
+        {/* <Admin /> */}
         <Slider />
       </Main>
 
