@@ -1,11 +1,9 @@
-.admin {}
-
 .wrapper {
     display: flex;
-    gap: 40px;
 }
 
 .menu {
+    min-width: 180px;
     margin-top: 50px;
     display: flex;
     flex-direction: column;

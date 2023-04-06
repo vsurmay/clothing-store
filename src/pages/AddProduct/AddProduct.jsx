@@ -1,9 +1,10 @@
 import React from "react";
 import classes from "./AddProduct.module.scss";
-import { Button, Checkbox, Form, Input, InputNumber } from "antd";
+import { Checkbox, Form, Input, InputNumber } from "antd";
 import { useDispatch } from "react-redux";
 import { adedProducts } from "../../redux/actions/productsAction";
 import { sizeOptions, colorOptions } from "../../forms/productFormData";
+import FillButton from "../../components/UI/Buttons/FillButton";
 
 const AddProduct = () => {
   const dispatch = useDispatch();
@@ -134,9 +135,9 @@ const AddProduct = () => {
           span: 16,
         }}
       >
-        <Button type="primary" htmlType="submit">
-          Submit
-        </Button>
+        <FillButton formButton type="submit">
+          Add Product
+        </FillButton>
       </Form.Item>
     </Form>
   );

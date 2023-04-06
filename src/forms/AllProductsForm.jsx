@@ -4,6 +4,7 @@ import { Button, Form, Input, InputNumber, Checkbox } from "antd";
 import { useDispatch } from "react-redux";
 import { editProducts } from "../redux/actions/productsAction";
 import { sizeOptions, colorOptions } from "./productFormData";
+import FillButton from "../components/UI/Buttons/FillButton";
 
 const AllProductsForm = ({ onClose, editProduct }) => {
   const dispatch = useDispatch();
@@ -19,7 +20,7 @@ const AllProductsForm = ({ onClose, editProduct }) => {
   return (
     <Form
       className={classes.form}
-      name="Add product"
+      name="Edit product"
       labelCol={{
         span: 8,
       }}
@@ -133,9 +134,9 @@ const AllProductsForm = ({ onClose, editProduct }) => {
           span: 16,
         }}
       >
-        <Button type="primary" htmlType="submit">
-          Submit
-        </Button>
+        <FillButton formButton type="submit">
+          Edit product
+        </FillButton>
       </Form.Item>
     </Form>
   );

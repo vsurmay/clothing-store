@@ -96,7 +96,7 @@ const AllProducts = () => {
 
   return (
     <>
-      <Table columns={columns} dataSource={data} />
+      <Table rowKey={(value) => value.id} columns={columns} dataSource={data} />
       <Drawer
         width={730}
         title="Edit product"

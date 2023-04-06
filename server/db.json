@@ -1,12 +1,13 @@
 {
   "products": [
     {
-      "name": "Test2EditTets",
+      "name": "Test2EditTetsTest",
       "size": [
         "w40",
         "w36",
         "w46",
-        "w44"
+        "w44",
+        "w26"
       ],
       "color": [
         "#F3ECE2",
@@ -14,12 +15,48 @@
         "#C2BEB6",
         "#2B9FA7",
         "#971E34",
-        "#292A2D"
+        "#292A2D",
+        "#AAABA7"
       ],
       "price": 200,
       "discount": 10,
       "image": "https://robohash.org/1aadaaaa",
       "id": 3
+    },
+    {
+      "name": "Test",
+      "size": [
+        "w31",
+        "w32",
+        "w40",
+        "w42",
+        "w33"
+      ],
+      "color": [
+        "#971E34",
+        "#F3ECE2",
+        "#292A2D"
+      ],
+      "price": 100,
+      "discount": 0,
+      "image": " https://robohash.org/a",
+      "id": 4
+    },
+    {
+      "name": "Tets2",
+      "size": [
+        "w26",
+        "w32",
+        "w31",
+        "w38"
+      ],
+      "color": [
+        "#971E34"
+      ],
+      "price": 200,
+      "discount": 0,
+      "image": " https://robohash.org/a",
+      "id": 5
     }
   ]
 }
