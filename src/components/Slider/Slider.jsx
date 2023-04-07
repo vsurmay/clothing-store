@@ -1,10 +1,12 @@
 import React from "react";
-import { Carousel } from "antd";
+import { Carousel, Image } from "antd";
 import Container from "../Container/Container";
 import LeftArrow from "../../img/arrow-left.svg";
 import RightArrow from "../../img/arrow-right.svg";
 import "./Slider.scss";
 import OutLineButton from "../UI/Buttons/OutLineButton";
+import silderImg1 from "../../img/slider-img1.png";
+import silderImg2 from "../../img/slider-img2.png";
 
 const Slider = () => {
   const contentStyle = {
@@ -41,7 +43,10 @@ const Slider = () => {
               </h1>
               <OutLineButton>Show Now</OutLineButton>
             </div>
-            <div className="slider__images"></div>
+            <div className="slider__images">
+              <Image preview={false} alt="Banner picture" src={silderImg1} />
+              <Image preview={false} alt="Banner picture" src={silderImg2} />
+            </div>
           </div>
           <div>
             <h3 style={contentStyle}>2</h3>
