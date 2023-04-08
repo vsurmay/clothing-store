@@ -23,7 +23,8 @@ const ProductForm = ({ add, editProduct, onClose }) => {
 
   return (
     <Form
-      className={classes.form}
+      layout="vertical"
+      className={`${add ? classes.formAdd : classes.formEdit}`}
       name={add ? "Add product" : "Edit Product"}
       labelCol={{
         span: 8,
