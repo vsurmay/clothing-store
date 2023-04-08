@@ -1,10 +1,17 @@
 .color {
-    padding: 0 5px;
+    // padding: 2px 10px;
     border-radius: 5px;
+    width: 18px;
+    height: 18px;
+}
 
-    &:not(:last-child) {
-        margin-right: 5px;
-    }
+.wrapper {
+    display: flex;
+    align-items: center;
+    row-gap: 5px;
+    column-gap: 10px;
+    flex-wrap: wrap;
+    // flex: 0 1 300px;
 }
 
 .size {

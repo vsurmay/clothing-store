@@ -46,23 +46,31 @@ const AllProducts = () => {
       title: "Colors",
       dataIndex: "color",
       key: "color",
-      render: (colors) =>
-        colors.map((el) => (
-          <span style={{ background: el }} key={el} className={classes.color}>
-            {el}
-          </span>
-        )),
+      render: (colors) => (
+        <div className={classes.wrapper}>
+          {colors.map((el) => (
+            <span
+              style={{ background: el }}
+              key={el}
+              className={classes.color}
+            ></span>
+          ))}
+        </div>
+      ),
     },
     {
       title: "Sizes",
       dataIndex: "size",
       key: "size",
-      render: (sizes) =>
-        sizes.map((el) => (
-          <span key={el} className={classes.size}>
-            {el.toUpperCase()}
-          </span>
-        )),
+      render: (sizes) => (
+        <div className={classes.wrapper}>
+          {sizes.map((el) => (
+            <span key={el} className={classes.size}>
+              {el.toUpperCase()}
+            </span>
+          ))}
+        </div>
+      ),
     },
     {
       title: "Active",

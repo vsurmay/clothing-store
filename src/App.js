@@ -1,19 +1,18 @@
 import classes from "./App.module.scss";
-import Container from "./components/Container/Container";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import Admin from "./pages/Admin/Admin";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { getProducts } from "./redux/actions/productsAction";
-import FillButton from "./components/UI/Buttons/FillButton";
-import OutLineButton from "./components/UI/Buttons/OutLineButton";
-import { EditOutlined } from "@ant-design/icons";
 import Slider from "./components/Slider/Slider";
+import ProductCard from "./components/ProductCard/ProductCard";
 
 function App() {
   const dispatch = useDispatch();
+
+  const products = useSelector((state) => state.products.data);
 
   useEffect(() => {
     dispatch(getProducts());
@@ -47,8 +46,11 @@ function App() {
       <Header menuItems={menuItems} />
 
       <Main>
-        {/* <Admin /> */}
-        <Slider />
+        <Admin />
+        {products.map((product) => (
+          <ProductCard data={product} key={product.id} />
+        ))}
+        {/* <Slider /> */}
       </Main>
 
       <Footer />
