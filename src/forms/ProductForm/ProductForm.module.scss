@@ -1,0 +1,18 @@
+.form {
+    max-width: 300px;
+
+    .group {
+        max-width: 100px;
+        margin-top: 5px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 10px;
+    }
+
+    .checkbox {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        border-radius: 5px;
+    }
+}

@@ -23,18 +23,15 @@
         "w50"
       ],
       "color": [
-        "#F3ECE2",
         "#666689",
         "#C2BEB6",
         "#2B9FA7",
         "#971E34",
-        "#292A2D",
         "#AAABA7",
         "#DAB1B1",
         "#73513C",
         "#24426A",
-        "#CBA13E",
-        "#18574A"
+        "#CBA13E"
       ],
       "price": 200,
       "discount": 10,
@@ -75,6 +72,22 @@
       "discount": 0,
       "image": " https://robohash.org/a",
       "id": 5
+    },
+    {
+      "name": "TestADd",
+      "size": [
+        "w27",
+        "w30"
+      ],
+      "color": [
+        "#292A2D",
+        "#AAABA7",
+        "#18574A"
+      ],
+      "price": 100,
+      "discount": 1,
+      "image": "https://robohash.org/aa",
+      "id": 6
     }
   ]
 }

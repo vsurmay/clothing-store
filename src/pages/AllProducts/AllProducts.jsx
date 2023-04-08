@@ -5,8 +5,8 @@ import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteProducts } from "../../redux/actions/productsAction";
 import { useState } from "react";
-import AllProductsForm from "../../forms/AllProductsForm";
 import OutLineButton from "../../components/UI/Buttons/OutLineButton";
+import ProductForm from "../../forms/ProductForm/ProductForm";
 
 const AllProducts = () => {
   const data = useSelector((state) => state.products.data);
@@ -113,7 +113,7 @@ const AllProducts = () => {
         open={open}
         destroyOnClose={true}
       >
-        <AllProductsForm editProduct={editProduct} onClose={onClose} />
+        <ProductForm editProduct={editProduct} onClose={onClose} />
       </Drawer>
     </>
   );
