@@ -8,7 +8,7 @@ const ProductCArd = ({ data }) => {
 
   return (
     <div className={classes.card}>
-      <Image width={344} src={data.image} />
+      <Image width={344} src={data.images[activeColor]} />
       <p className={classes.variety}>top women</p>
       <h4 className={classes.name}>{data.name}</h4>
       <h3 className={classes.price}>{data.price.toFixed(2) + " EUR"}</h3>

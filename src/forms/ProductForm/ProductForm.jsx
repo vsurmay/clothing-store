@@ -93,6 +93,25 @@ const ProductForm = ({ add, editProduct, onClose }) => {
         </Checkbox.Group>
       </Form.Item>
 
+      {colorOptions.map((color) => (
+        <Form.Item
+          key={color.key}
+          name={["images", color.key]}
+          label={
+            <div
+              style={{
+                background: color.key,
+                width: "20px",
+                height: "20px",
+                borderRadius: "5px",
+              }}
+            ></div>
+          }
+        >
+          <Input addonBefore={"Url"} />
+        </Form.Item>
+      ))}
+
       <Form.Item
         label="Price"
         name="price"
@@ -119,7 +138,7 @@ const ProductForm = ({ add, editProduct, onClose }) => {
         <InputNumber addonBefore={"%"} min={0} max={100} />
       </Form.Item>
 
-      <Form.Item
+      {/* <Form.Item
         label="Image"
         name="image"
         rules={[
@@ -130,7 +149,7 @@ const ProductForm = ({ add, editProduct, onClose }) => {
         ]}
       >
         <Input addonBefore={"Url"} />
-      </Form.Item>
+      </Form.Item> */}
 
       <Form.Item
         wrapperCol={{

@@ -1,94 +1,36 @@
 {
   "products": [
     {
-      "name": "Test2EditTetsTest",
-      "size": [
-        "w40",
-        "w36",
-        "w46",
-        "w44",
-        "w26",
-        "w28",
-        "w27",
-        "w33",
-        "w32",
-        "w31",
-        "osfa",
-        "w29",
-        "w30",
-        "w35",
-        "w34",
-        "w48",
-        "w52",
-        "w50"
-      ],
-      "color": [
-        "#666689",
-        "#C2BEB6",
-        "#2B9FA7",
-        "#971E34",
-        "#AAABA7",
-        "#DAB1B1",
-        "#73513C",
-        "#24426A",
-        "#CBA13E"
-      ],
-      "price": 200,
-      "discount": 10,
-      "image": "https://robohash.org/1aadaaaa",
-      "id": 3
-    },
-    {
       "name": "Test",
       "size": [
         "w31",
         "w32",
         "w40",
-        "w42",
-        "w33"
-      ],
-      "color": [
-        "#971E34",
-        "#F3ECE2",
-        "#292A2D"
-      ],
-      "price": 100,
-      "discount": 0,
-      "image": " https://robohash.org/a",
-      "id": 4
-    },
-    {
-      "name": "Tets2",
-      "size": [
-        "w26",
-        "w32",
-        "w31",
-        "w38"
-      ],
-      "color": [
-        "#971E34"
-      ],
-      "price": 200,
-      "discount": 0,
-      "image": " https://robohash.org/a",
-      "id": 5
-    },
-    {
-      "name": "TestADd",
-      "size": [
-        "w27",
-        "w30"
+        "w52"
       ],
       "color": [
         "#292A2D",
-        "#AAABA7",
-        "#18574A",
-        "#24426A"
+        "#F3ECE2",
+        "#971E34",
+        "#CBA13E"
       ],
-      "price": 100,
-      "discount": 1,
-      "image": "https://robohash.org/aa",
-      "id": 6
+      "images": {
+        "#292A2D": "https://robohash.org/aaa",
+        "#F3ECE2": "https://robohash.org/aaxx",
+        "#24426A": "https://robohash.org/aac",
+        "#18574A": "https://robohash.org/aav",
+        "#666689": "https://robohash.org/aag",
+        "#C2BEB6": "https://robohash.org/aah",
+        "#AAABA7": "https://robohash.org/aaj",
+        "#971E34": "https://robohash.org/aak",
+        "#CBA13E": "https://robohash.org/aaal",
+        "#73513C": "https://robohash.org/aa;",
+        "#DAB1B1": "https://robohash.org/aa'",
+        "#2B9FA7": "https://robohash.org/aag"
+      },
+      "price": 1,
+      "discount": 2,
+      "id": 1
     }
   ]
 }
