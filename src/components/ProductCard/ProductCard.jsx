@@ -3,12 +3,17 @@ import React, { useState } from "react";
 import PickColor from "../PickColor/PickColor";
 import classes from "./ProductCard.module.scss";
 
-const ProductCArd = ({ data }) => {
+const ProductCArd = ({ data, setActiveProductPage }) => {
   const [activeColor, setActiveColor] = useState(data.color[0]);
 
   return (
-    <div className={classes.card}>
-      <Image width={344} src={data.images[activeColor]} />
+    <div
+      onClick={() => {
+        setActiveProductPage({ active: true, product: { ...data } });
+      }}
+      className={classes.card}
+    >
+      <Image preview={false} width={344} src={data.images[activeColor]} />
       <p className={classes.variety}>top women</p>
       <h4 className={classes.name}>{data.name}</h4>
       <h3 className={classes.price}>{data.price.toFixed(2) + " EUR"}</h3>

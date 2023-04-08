@@ -12,7 +12,8 @@ const PickColor = ({ setActiveColor, activeColor, colors }) => {
           key={color}
         >
           <button
-            onClick={() => {
+            onClick={(e) => {
+              e.stopPropagation();
               setActiveColor(color);
             }}
             className={classes.color}

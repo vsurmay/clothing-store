@@ -4,15 +4,23 @@ import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import Admin from "./pages/Admin/Admin";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { getProducts } from "./redux/actions/productsAction";
 import Slider from "./components/Slider/Slider";
 import ProductCard from "./components/ProductCard/ProductCard";
+import ProductPage from "./pages/ProductPage/ProductPage";
+import PickSize from "./components/PickSize/PickSize";
 
 function App() {
   const dispatch = useDispatch();
 
   const products = useSelector((state) => state.products.data);
+
+  // =============
+  const [activeProductPage, setActiveProductPage] = useState({
+    active: false,
+    product: {},
+  });
 
   useEffect(() => {
     dispatch(getProducts());
@@ -47,9 +55,18 @@ function App() {
 
       <Main>
         <Admin />
-        {products.map((product) => (
-          <ProductCard data={product} key={product.id} />
-        ))}
+        <div style={{ display: "flex" }}>
+          {products.map((product) => (
+            <ProductCard
+              setActiveProductPage={setActiveProductPage}
+              data={product}
+              key={product.id}
+            />
+          ))}
+        </div>
+        {activeProductPage.active ? (
+          <ProductPage product={activeProductPage.product} />
+        ) : null}
         {/* <Slider /> */}
       </Main>
 
