@@ -8,14 +8,14 @@ const OutLineButton = styled.button`
   letter-spacing: 0.5px;
   text-transform: uppercase;
   color: ${(props) => (props.delete ? "#eb5757" : "#3f3f3f")};
-  padding: ${(props) => (props.small ? "4px 14px" : "15px 44px")};
+  padding: ${(props) => (props.small ? props.small : "15px 44px")};
   border: ${(props) =>
     props.delete ? "2px solid #eb5757" : "2px solid #3f3f3f"};
   transition: all 0.5s ease;
   display: flex;
   gap: 4px;
   align-items: center;
-  border-radius: ${(props) => (props.small ? "5px" : "0px")};
+  border-radius: ${(props) => (props.borderRadius ? "5px" : "0px")};
 
   &:hover {
     color: ${(props) => (props.delete ? "red" : "#000000")};

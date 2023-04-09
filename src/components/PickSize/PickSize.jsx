@@ -3,8 +3,6 @@ import classes from "./PickSize.module.scss";
 import { sizeOptions } from "../../forms/ProductForm/productFormData";
 
 const PickSize = ({ availableSizes, activeSize, setActiveSize }) => {
-  console.log(availableSizes.includes("w31"));
-  console.log(sizeOptions);
   return (
     <div className={classes.sizeBox}>
       {sizeOptions.map((size) => (

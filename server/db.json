@@ -31,6 +31,38 @@
       "price": 1,
       "discount": 2,
       "id": 1
+    },
+    {
+      "name": "Test2",
+      "size": [
+        "w52",
+        "w48",
+        "w50"
+      ],
+      "color": [
+        "#292A2D",
+        "#F3ECE2",
+        "#971E34",
+        "#24426A",
+        "#CBA13E"
+      ],
+      "images": {
+        "#292A2D": " https://robohash.org/aa",
+        "#F3ECE2": " https://robohash.org/aa",
+        "#24426A": " https://robohash.org/aa",
+        "#18574A": " https://robohash.org/aa",
+        "#666689": " https://robohash.org/aa",
+        "#C2BEB6": " https://robohash.org/aa",
+        "#AAABA7": " https://robohash.org/aa",
+        "#971E34": " https://robohash.org/aa",
+        "#CBA13E": " https://robohash.org/aa",
+        "#73513C": " https://robohash.org/aa",
+        "#DAB1B1": " https://robohash.org/aa",
+        "#2B9FA7": " https://robohash.org/aa"
+      },
+      "price": 1000,
+      "discount": 2,
+      "id": 2
     }
   ]
 }

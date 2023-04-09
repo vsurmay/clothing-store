@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const FillButton = styled.button`
-  margin: 10px;
   padding: ${(props) => (props.formButton ? "7px 15px" : "10px 30px")};
   font-family: "Oswald", sans-serif;
   font-weight: 500;

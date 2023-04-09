@@ -79,7 +79,8 @@ const AllProducts = () => {
         return (
           <div className={classes.active}>
             <OutLineButton
-              small
+              small={"4px 14px"}
+              borderRadius={"5px"}
               onClick={() => {
                 showDrawer();
                 setEditProduct(product);
@@ -88,7 +89,8 @@ const AllProducts = () => {
               <EditOutlined /> Edit
             </OutLineButton>
             <OutLineButton
-              small
+              small={"4px 14px"}
+              borderRadius={"5px"}
               delete
               onClick={() => {
                 dispatch(deleteProducts(product));
