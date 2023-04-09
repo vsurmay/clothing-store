@@ -7,11 +7,15 @@ import FillButton from "../../components/UI/Buttons/FillButton";
 import OutLineButton from "../../components/UI/Buttons/OutLineButton";
 import { HeartOutlined } from "@ant-design/icons";
 import { InputNumber, Image } from "antd";
+import { useDispatch } from "react-redux";
+import { adedProductBasket } from "../../redux/actions/basketAction";
 
 const ProductPage = ({ product }) => {
   const [activeColor, setActiveColor] = useState(product.color[0]);
   const [activeSize, setActiveSize] = useState(null);
   const [quantityProduct, setQuantityProduct] = useState(1);
+
+  const dispatch = useDispatch();
 
   const onSubmit = () => {
     const result = {
@@ -20,10 +24,11 @@ const ProductPage = ({ product }) => {
       color: activeColor,
       size: activeSize,
       quantity: quantityProduct,
-      totalProce: (quantityProduct * product.price).toFixed(2),
+      totalPrice: (quantityProduct * product.price).toFixed(2),
       image: product.images[activeColor],
+      id: product.name + activeSize + activeColor,
     };
-
+    dispatch(adedProductBasket(result));
     console.log(result);
   };
 
