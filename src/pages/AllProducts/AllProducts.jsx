@@ -10,6 +10,7 @@ import ProductForm from "../../forms/ProductForm/ProductForm";
 
 const AllProducts = () => {
   const data = useSelector((state) => state.products.data);
+
   console.log(data);
 
   const dispatch = useDispatch();
@@ -34,9 +35,12 @@ const AllProducts = () => {
     },
     {
       title: "Image",
-      dataIndex: "image",
+      dataIndex: "images",
       key: "image",
-      render: (url) => <Image src={url} width={50} />,
+      render: (url) => {
+        // console.log(url[data.color[0]]);
+        return <Image src={url} width={50} />;
+      },
     },
     {
       title: "Price",

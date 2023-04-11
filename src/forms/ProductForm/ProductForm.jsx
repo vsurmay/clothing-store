@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import classes from "./ProductForm.module.scss";
 import { Checkbox, Form, Input, InputNumber } from "antd";
 import { useDispatch } from "react-redux";
@@ -8,6 +8,14 @@ import FillButton from "../../components/UI/Buttons/FillButton";
 
 const ProductForm = ({ add, editProduct, onClose }) => {
   const dispatch = useDispatch();
+
+  const [selectColors, setSelectColors] = useState([]);
+
+  useEffect(() => {
+    if (editProduct) {
+      setSelectColors(editProduct.color);
+    }
+  }, []);
 
   const onFinish = (values) => {
     if (add) {
@@ -51,6 +59,19 @@ const ProductForm = ({ add, editProduct, onClose }) => {
       </Form.Item>
 
       <Form.Item
+        label="Product Code"
+        name="productCode"
+        rules={[
+          {
+            required: true,
+            message: "Please input product code!",
+          },
+        ]}
+      >
+        <Input />
+      </Form.Item>
+
+      <Form.Item
         label="Size"
         name="size"
         rules={[
@@ -80,7 +101,12 @@ const ProductForm = ({ add, editProduct, onClose }) => {
           },
         ]}
       >
-        <Checkbox.Group className={classes.group}>
+        <Checkbox.Group
+          onChange={(e) => {
+            setSelectColors(e);
+          }}
+          className={classes.group}
+        >
           {colorOptions.map((el) => (
             <div
               style={{ background: el.key, padding: "5px" }}
@@ -94,24 +120,27 @@ const ProductForm = ({ add, editProduct, onClose }) => {
         </Checkbox.Group>
       </Form.Item>
 
-      {colorOptions.map((color) => (
-        <Form.Item
-          key={color.key}
-          name={["images", color.key]}
-          label={
-            <div
-              style={{
-                background: color.key,
-                width: "20px",
-                height: "20px",
-                borderRadius: "5px",
-              }}
-            ></div>
-          }
-        >
-          <Input addonBefore={"Url"} />
-        </Form.Item>
-      ))}
+      {selectColors
+        ? selectColors.map((color) => (
+            <Form.Item
+              className={classes.test}
+              key={color}
+              name={["images", color]}
+              label={
+                <div
+                  style={{
+                    background: color,
+                    width: "20px",
+                    height: "20px",
+                    borderRadius: "5px",
+                  }}
+                ></div>
+              }
+            >
+              <Input addonBefore={"Url"} />
+            </Form.Item>
+          ))
+        : null}
 
       <Form.Item
         label="Price"

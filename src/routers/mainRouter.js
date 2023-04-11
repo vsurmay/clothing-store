@@ -50,6 +50,7 @@ export const mainRouter = createBrowserRouter([
         errorElement: <ErrorPage />,
         children: [
           {
+            index: true,
             path: "add_product",
             element: <AddProduct />,
           },
