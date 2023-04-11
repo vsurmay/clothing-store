@@ -4,13 +4,14 @@ import Container from "../../components/Container/Container";
 import { useState } from "react";
 import AllProducts from "../AllProducts/AllProducts";
 import AddProduct from "../AddProduct/AddProduct";
+import { NavLink, Outlet } from "react-router-dom";
 
 const Admin = () => {
   const [activeMenuKey, setActiveMenuKey] = useState("all_product");
 
   const menuItems = [
     {
-      key: "all_product",
+      key: "all_products",
       text: "All products",
     },
     {
@@ -18,19 +19,6 @@ const Admin = () => {
       text: "Add product",
     },
   ];
-
-  function menuRender(key) {
-    switch (key) {
-      case "all_product":
-        return <AllProducts />;
-
-      case "add_product":
-        return <AddProduct />;
-
-      default:
-        return <AllProducts />;
-    }
-  }
 
   return (
     <div className={classes.admin}>
@@ -44,17 +32,22 @@ const Admin = () => {
                 }}
                 key={el.key}
               >
-                <a
-                  className={`${classes.link} ${
-                    activeMenuKey === el.key ? classes.active : null
-                  }`}
+                <NavLink
+                  to={el.key}
+                  className={({ isActive, isPending }) =>
+                    isPending
+                      ? `${classes.link}`
+                      : isActive
+                      ? `${classes.link} ${classes.active}`
+                      : `${classes.link}`
+                  }
                 >
                   {el.text}
-                </a>
+                </NavLink>
               </li>
             ))}
           </ul>
-          {menuRender(activeMenuKey)}
+          <Outlet />
         </div>
       </Container>
     </div>

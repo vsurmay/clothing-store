@@ -10,6 +10,7 @@ import ProductForm from "../../forms/ProductForm/ProductForm";
 
 const AllProducts = () => {
   const data = useSelector((state) => state.products.data);
+  console.log(data);
 
   const dispatch = useDispatch();
 

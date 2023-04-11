@@ -1,22 +1,26 @@
 import React from "react";
 import classes from "./Menu.module.scss";
 import { SearchOutlined } from "@ant-design/icons";
+import { NavLink } from "react-router-dom";
 
 const Menu = ({ menuItems }) => {
   return (
     <div className={classes.wrapper}>
       <nav className={classes.menu}>
         {menuItems.map((el) => (
-          <a
-            //   потрібно перадавати вклчену сторінку і якщо key буде збігатися додавати кла active
-            className={`${classes.link} ${classes.active}`}
-            onClick={(e) => {
-              e.preventDefault();
-            }}
+          <NavLink
+            to={el.key}
+            className={({ isActive, isPending }) =>
+              isPending
+                ? `${classes.link}`
+                : isActive
+                ? `${classes.link} ${classes.active}`
+                : `${classes.link}`
+            }
             key={el.key}
           >
             {el.text}
-          </a>
+          </NavLink>
         ))}
       </nav>
       <button className={classes.search}>

@@ -10,6 +10,7 @@ import Slider from "./components/Slider/Slider";
 import ProductCard from "./components/ProductCard/ProductCard";
 import ProductPage from "./pages/ProductPage/ProductPage";
 import PickSize from "./components/PickSize/PickSize";
+import { Outlet } from "react-router-dom";
 
 function App() {
   const dispatch = useDispatch();
@@ -26,35 +27,13 @@ function App() {
     dispatch(getProducts());
   }, []);
 
-  const menuItems = [
-    {
-      text: "home",
-      key: "home",
-    },
-    {
-      text: "shop",
-      key: "shop",
-    },
-    {
-      text: "blog",
-      key: "blog",
-    },
-    {
-      text: "sale",
-      key: "sale",
-    },
-    {
-      text: "contact us",
-      key: "contact",
-    },
-  ];
-
   return (
     <div className={classes.layout}>
-      <Header menuItems={menuItems} />
+      <Header />
 
       <Main>
-        <Admin />
+        <Outlet />
+        {/* <Admin />
         <div style={{ display: "flex" }}>
           {products.map((product) => (
             <ProductCard
@@ -67,7 +46,7 @@ function App() {
         {activeProductPage.active ? (
           <ProductPage product={activeProductPage.product} />
         ) : null}
-        {/* <Slider /> */}
+        <Slider /> */}
       </Main>
 
       <Footer />
