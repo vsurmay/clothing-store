@@ -1,10 +1,10 @@
 import { Result } from "antd";
 import { useRouteError, Link } from "react-router-dom";
 import FillButton from "../../components/UI/Buttons/FillButton";
-import { mainPaths } from "../../routers/mainRouter";
+import { mainPaths } from "../../routers/publicRouter";
 
 const ErorPage = () => {
-  const { status } = useRouteError();
+  const status = "404";
   return (
     <Result
       status={status}

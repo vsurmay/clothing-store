@@ -5,12 +5,11 @@ import "./scss/global.scss";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 import { RouterProvider } from "react-router-dom";
-import { mainRouter } from "./routers/mainRouter";
-import { adminRouter } from "./routers/adminRouter";
+import { publicRouter } from "./routers/publicRouter";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
-    <RouterProvider router={mainRouter} />
+    <RouterProvider router={publicRouter} />
   </Provider>
 );

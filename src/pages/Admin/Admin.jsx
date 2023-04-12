@@ -5,17 +5,18 @@ import { useState } from "react";
 import AllProducts from "../AllProducts/AllProducts";
 import AddProduct from "../AddProduct/AddProduct";
 import { NavLink, Outlet } from "react-router-dom";
+import { mainPaths } from "../../routers/publicRouter";
 
 const Admin = () => {
   const [activeMenuKey, setActiveMenuKey] = useState("all_product");
 
   const menuItems = [
     {
-      key: "all_products",
+      key: mainPaths.ALL_PRODUCTS,
       text: "All products",
     },
     {
-      key: "add_product",
+      key: mainPaths.ADD_PRODUCT,
       text: "Add product",
     },
   ];

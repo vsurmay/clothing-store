@@ -9,6 +9,7 @@ import Sale from "../pages/Sale/Sale";
 import Admin from "../pages/Admin/Admin";
 import AddProduct from "../pages/AddProduct/AddProduct";
 import AllProducts from "../pages/AllProducts/AllProducts";
+import EditProduct from "../pages/EditProduct/EditProduct";
 
 export const mainPaths = {
   HOME: "/",
@@ -16,13 +17,17 @@ export const mainPaths = {
   BLOG: "/blog",
   SALE: "/sale",
   CONTACT_US: "/contact_us",
+  ADMIN: "/admin",
+  ALL_PRODUCTS: "all_products",
+  ADD_PRODUCT: "add_product",
+  EDIT_PRODUCT: "all_products/edit_product/:productId",
 };
 
-export const mainRouter = createBrowserRouter([
+export const publicRouter = createBrowserRouter([
   {
     path: mainPaths.HOME,
     element: <App />,
-    errorElement: <ErrorPage />,
+    // errorElement: <ErrorPage />,
     children: [
       {
         index: true,
@@ -44,22 +49,30 @@ export const mainRouter = createBrowserRouter([
         path: mainPaths.CONTACT_US,
         element: <ContactUs />,
       },
+    ],
+  },
+  {
+    path: mainPaths.ADMIN,
+    element: <Admin />,
+    errorElement: <ErrorPage />,
+    children: [
       {
-        path: "/admin",
-        element: <Admin />,
-        errorElement: <ErrorPage />,
-        children: [
-          {
-            index: true,
-            path: "add_product",
-            element: <AddProduct />,
-          },
-          {
-            path: "all_products",
-            element: <AllProducts />,
-          },
-        ],
+        index: true,
+        path: mainPaths.ADD_PRODUCT,
+        element: <AddProduct />,
+      },
+      {
+        path: mainPaths.ALL_PRODUCTS,
+        element: <AllProducts />,
+      },
+      {
+        path: mainPaths.EDIT_PRODUCT,
+        element: <EditProduct />,
       },
     ],
+  },
+  {
+    path: "*",
+    element: <ErrorPage />,
   },
 ]);

@@ -7,7 +7,7 @@ import Menu from "../Menu/Menu";
 import { HeartOutlined } from "@ant-design/icons";
 import ShopingCardIcon from "../ShopingCardIcon/ShopingCardIcon";
 import { Link } from "react-router-dom";
-import { mainPaths } from "../../routers/mainRouter";
+import { mainPaths } from "../../routers/publicRouter";
 
 const Header = () => {
   const menuItems = [

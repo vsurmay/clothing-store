@@ -1,31 +1,25 @@
-import React from "react";
 import classes from "./AllProducts.module.scss";
+import React, { useEffect } from "react";
 import { Table, Image, Drawer } from "antd";
 import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteProducts } from "../../redux/actions/productsAction";
+import {
+  deleteProducts,
+  getProducts,
+} from "../../redux/actions/productsAction";
 import { useState } from "react";
 import OutLineButton from "../../components/UI/Buttons/OutLineButton";
 import ProductForm from "../../forms/ProductForm/ProductForm";
+import { Link } from "react-router-dom";
 
 const AllProducts = () => {
   const data = useSelector((state) => state.products.data);
 
-  console.log(data);
-
   const dispatch = useDispatch();
 
-  const [editProduct, setEditProduct] = useState("");
-
-  const [open, setOpen] = useState(false);
-
-  const showDrawer = () => {
-    setOpen(true);
-  };
-
-  const onClose = () => {
-    setOpen(false);
-  };
+  useEffect(() => {
+    dispatch(getProducts());
+  }, []);
 
   const columns = [
     {
@@ -37,9 +31,9 @@ const AllProducts = () => {
       title: "Image",
       dataIndex: "images",
       key: "image",
-      render: (url) => {
-        // console.log(url[data.color[0]]);
-        return <Image src={url} width={50} />;
+      render: (url, product) => {
+        const firstColor = product.color[0];
+        return <Image src={url[firstColor]} width={50} />;
       },
     },
     {
@@ -83,16 +77,11 @@ const AllProducts = () => {
       render: (product) => {
         return (
           <div className={classes.active}>
-            <OutLineButton
-              small={"4px 14px"}
-              borderRadius={"5px"}
-              onClick={() => {
-                showDrawer();
-                setEditProduct(product);
-              }}
-            >
-              <EditOutlined /> Edit
-            </OutLineButton>
+            <Link to={`edit_product/${product.id}`}>
+              <OutLineButton small={"4px 14px"} borderRadius={"5px"}>
+                <EditOutlined /> Edit
+              </OutLineButton>
+            </Link>
             <OutLineButton
               small={"4px 14px"}
               borderRadius={"5px"}
@@ -112,16 +101,6 @@ const AllProducts = () => {
   return (
     <>
       <Table rowKey={(value) => value.id} columns={columns} dataSource={data} />
-      <Drawer
-        width={730}
-        title="Edit product"
-        placement="right"
-        onClose={onClose}
-        open={open}
-        destroyOnClose={true}
-      >
-        <ProductForm editProduct={editProduct} onClose={onClose} />
-      </Drawer>
     </>
   );
 };

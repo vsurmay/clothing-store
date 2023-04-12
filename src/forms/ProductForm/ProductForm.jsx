@@ -5,9 +5,11 @@ import { useDispatch } from "react-redux";
 import { adedProducts, editProducts } from "../../redux/actions/productsAction";
 import { sizeOptions, colorOptions } from "./productFormData";
 import FillButton from "../../components/UI/Buttons/FillButton";
+import { useNavigate } from "react-router-dom";
 
-const ProductForm = ({ add, editProduct, onClose }) => {
+const ProductForm = ({ add, editProduct }) => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const [selectColors, setSelectColors] = useState([]);
 
@@ -22,7 +24,7 @@ const ProductForm = ({ add, editProduct, onClose }) => {
       dispatch(adedProducts(values));
     } else {
       dispatch(editProducts(values, editProduct.id));
-      onClose();
+      navigate("/admin/all_products");
     }
   };
   const onFinishFailed = (errorInfo) => {
