@@ -10,7 +10,7 @@ import Slider from "./components/Slider/Slider";
 import ProductCard from "./components/ProductCard/ProductCard";
 import ProductPage from "./pages/ProductPage/ProductPage";
 import PickSize from "./components/PickSize/PickSize";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 
 function App() {
   const dispatch = useDispatch();
@@ -32,6 +32,7 @@ function App() {
       <Header />
 
       <Main>
+        <Link to={"/admin"}>AdminLink</Link>
         <Outlet />
         {/* <Admin />
         <div style={{ display: "flex" }}>

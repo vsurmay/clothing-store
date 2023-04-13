@@ -9,12 +9,10 @@ const EditProduct = () => {
   const currentProduct = useSelector((state) =>
     state.products.data.find((product) => product.id === Number(productId))
   );
-  console.log(currentProduct);
 
   return (
     <>
       <ProductForm editProduct={currentProduct} />
-      <>hey</>
     </>
   );
 };

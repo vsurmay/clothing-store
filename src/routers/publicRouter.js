@@ -57,7 +57,6 @@ export const publicRouter = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        index: true,
         path: mainPaths.ADD_PRODUCT,
         element: <AddProduct />,
       },

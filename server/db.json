@@ -9,63 +9,71 @@
       ],
       "color": [
         "#971E34",
-        "#18574A",
         "#CBA13E",
-        "#DAB1B1"
+        "#DAB1B1",
+        "#24426A"
       ],
       "price": 100,
       "discount": 2,
       "images": {
         "#971E34": "https://robohash.org/aaa",
-        "#18574A": "https://robohash.org/abb",
         "#CBA13E": "https://robohash.org/abba",
-        "#DAB1B1": "https://robohash.org/abbaa"
+        "#DAB1B1": "https://robohash.org/abbaa",
+        "#24426A": "asd"
       },
       "id": 1
     },
     {
-      "name": "Tets2",
-      "productCode": "rmx0100",
+      "name": "qwe;",
+      "productCode": "test3",
       "size": [
-        "w32",
-        "w42",
-        "w52"
+        "w32"
       ],
       "color": [
-        "#24426A",
-        "#2B9FA7",
         "#73513C",
-        "#971E34"
+        "#F3ECE2",
+        "#CBA13E"
       ],
-      "price": 100000,
-      "discount": 2,
+      "price": 10,
+      "discount": 1,
       "images": {
-        "#24426A": "https://robohash.org/aaaasdsa",
-        "#2B9FA7": "https://robohash.org/aaaa",
-        "#73513C": "https://robohash.org/aaaa",
-        "#971E34": "https://robohash.org/aaaa"
-      },
-      "id": 2
-    },
-    {
-      "name": "Tets2",
-      "productCode": "test",
-      "size": [
-        "osfa",
-        "w32",
-        "w40"
-      ],
-      "color": [
-        "#292A2D",
-        "#F3ECE2"
-      ],
-      "price": 1100,
-      "discount": 2,
-      "images": {
-        "#292A2D": "https://robohash.org/aaa",
-        "#F3ECE2": "https://robohash.org/aaaa"
+        "#73513C": "qwe",
+        "#F3ECE2": "asdsad",
+        "#CBA13E": "asdasd"
       },
       "id": 3
+    },
+    {
+      "name": "asdasd",
+      "productCode": "test10",
+      "size": [
+        "w32"
+      ],
+      "color": [
+        "#F3ECE2"
+      ],
+      "price": 100,
+      "discount": 2,
+      "images": {
+        "#F3ECE2": "asd"
+      },
+      "id": 4
+    },
+    {
+      "name": "Test Navigate",
+      "productCode": "RMX1001",
+      "size": [
+        "w32"
+      ],
+      "color": [
+        "#971E34"
+      ],
+      "price": 200,
+      "discount": 1,
+      "images": {
+        "#971E34": "qwe"
+      },
+      "id": 5
     }
   ]
 }
