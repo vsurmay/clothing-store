@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import classes from "./Admin.module.scss";
 import Container from "../../components/Container/Container";
 import { useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import { mainPaths } from "../../routers/publicRouter";
+import { useDispatch } from "react-redux";
+import { getProducts } from "../../redux/actions/productsAction";
 
 const Admin = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getProducts());
+  }, []);
+
   const menuItems = [
     {
       key: mainPaths.ALL_PRODUCTS,

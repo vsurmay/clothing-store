@@ -1,25 +1,16 @@
 import classes from "./AllProducts.module.scss";
-import React, { useEffect } from "react";
-import { Table, Image, Drawer } from "antd";
+import React from "react";
+import { Table, Image } from "antd";
 import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  deleteProducts,
-  getProducts,
-} from "../../redux/actions/productsAction";
-import { useState } from "react";
+import { deleteProducts } from "../../redux/actions/productsAction";
 import OutLineButton from "../../components/UI/Buttons/OutLineButton";
-import ProductForm from "../../forms/ProductForm/ProductForm";
 import { Link } from "react-router-dom";
 
 const AllProducts = () => {
   const data = useSelector((state) => state.products.data);
 
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getProducts());
-  }, []);
 
   const columns = [
     {

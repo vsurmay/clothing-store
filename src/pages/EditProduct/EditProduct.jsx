@@ -6,13 +6,22 @@ import ProductForm from "../../forms/ProductForm/ProductForm";
 const EditProduct = () => {
   const { productId } = useParams();
 
-  const currentProduct = useSelector((state) =>
-    state.products.data.find((product) => product.id === Number(productId))
-  );
+  const loader = useSelector((state) => state.loader.loader);
+  const currentProduct = useSelector((state) => {
+    console.log(state);
+    return state.products.data.find(
+      (product) => product.id === Number(productId)
+    );
+  });
+  console.log(loader);
 
   return (
     <>
-      <ProductForm editProduct={currentProduct} />
+      {loader && currentProduct == undefined ? null : (
+        <ProductForm editProduct={currentProduct} />
+      )}
+
+      {/*  */}
     </>
   );
 };

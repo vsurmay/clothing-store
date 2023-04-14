@@ -11,20 +11,14 @@ import ProductCard from "./components/ProductCard/ProductCard";
 import ProductPage from "./pages/ProductPage/ProductPage";
 import PickSize from "./components/PickSize/PickSize";
 import { Outlet, Link } from "react-router-dom";
+import { GetProductsBasket } from "./redux/actions/basketAction";
 
 function App() {
   const dispatch = useDispatch();
 
-  const products = useSelector((state) => state.products.data);
-
-  // =============
-  const [activeProductPage, setActiveProductPage] = useState({
-    active: false,
-    product: {},
-  });
-
   useEffect(() => {
     dispatch(getProducts());
+    dispatch(GetProductsBasket());
   }, []);
 
   return (
@@ -35,15 +29,7 @@ function App() {
         <Link to={"/admin"}>AdminLink</Link>
         <Outlet />
         {/* <Admin />
-        <div style={{ display: "flex" }}>
-          {products.map((product) => (
-            <ProductCard
-              setActiveProductPage={setActiveProductPage}
-              data={product}
-              key={product.id}
-            />
-          ))}
-        </div>
+        
         {activeProductPage.active ? (
           <ProductPage product={activeProductPage.product} />
         ) : null}

@@ -10,6 +10,9 @@ import Admin from "../pages/Admin/Admin";
 import AddProduct from "../pages/AddProduct/AddProduct";
 import AllProducts from "../pages/AllProducts/AllProducts";
 import EditProduct from "../pages/EditProduct/EditProduct";
+import ProductPage from "../pages/ProductPage/ProductPage";
+import ShopMain from "../pages/ShopMain/ShopMain";
+import Basket from "../pages/Basket/Basket";
 
 export const mainPaths = {
   HOME: "/",
@@ -21,6 +24,7 @@ export const mainPaths = {
   ALL_PRODUCTS: "all_products",
   ADD_PRODUCT: "add_product",
   EDIT_PRODUCT: "all_products/edit_product/:productId",
+  BASKET: "basket",
 };
 
 export const publicRouter = createBrowserRouter([
@@ -36,6 +40,16 @@ export const publicRouter = createBrowserRouter([
       {
         path: mainPaths.SHOP,
         element: <Shop />,
+        children: [
+          {
+            element: <ShopMain />,
+            index: true,
+          },
+          {
+            element: <ProductPage />,
+            path: "product/:productId",
+          },
+        ],
       },
       {
         path: mainPaths.BLOG,
@@ -48,6 +62,10 @@ export const publicRouter = createBrowserRouter([
       {
         path: mainPaths.CONTACT_US,
         element: <ContactUs />,
+      },
+      {
+        path: mainPaths.BASKET,
+        element: <Basket />,
       },
     ],
   },

@@ -20,18 +20,16 @@ const ProductForm = ({ add, editProduct }) => {
   const allProductCodes = useSelector((state) =>
     state.products.data.map((product) => product.productCode)
   );
-  console.log(allProductCodes);
-  console.log(editProduct);
 
   useEffect(() => {
     dispatch(getProducts());
   }, []);
 
-  useEffect(() => {
-    if (editProduct) {
-      setSelectColors(editProduct.color);
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (editProduct) {
+  //     setSelectColors(editProduct.color);
+  //   }
+  // }, []);
 
   const [messageApi, contextHolder] = message.useMessage();
 
@@ -75,7 +73,7 @@ const ProductForm = ({ add, editProduct }) => {
     } else {
       success("The product has been changed successfully");
       dispatch(editProducts(values, editProduct.id));
-      // navigate("/admin/all_products");
+      navigate("/admin/all_products");
     }
   };
   const onFinishFailed = (errorInfo) => {

@@ -1,7 +1,12 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 
 const Shop = () => {
-  return <div>Shop</div>;
+  return (
+    <>
+      <Outlet />
+    </>
+  );
 };
 
 export default Shop;

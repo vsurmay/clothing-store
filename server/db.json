@@ -34,12 +34,12 @@
         "#F3ECE2",
         "#CBA13E"
       ],
-      "price": 10,
+      "price": 1002,
       "discount": 1,
       "images": {
-        "#73513C": "qwe",
-        "#F3ECE2": "asdsad",
-        "#CBA13E": "asdasd"
+        "#73513C": "https://robohash.org/aaaa",
+        "#F3ECE2": "https://robohash.org/aaaf",
+        "#CBA13E": "https://robohash.org/aaaas"
       },
       "id": 3
     },
@@ -47,15 +47,18 @@
       "name": "asdasd",
       "productCode": "test10",
       "size": [
-        "w32"
+        "w32",
+        "w33"
       ],
       "color": [
-        "#F3ECE2"
+        "#F3ECE2",
+        "#73513C"
       ],
       "price": 100,
       "discount": 2,
       "images": {
-        "#F3ECE2": "asd"
+        "#F3ECE2": "https://robohash.org/aa",
+        "#73513C": "https://robohash.org/a"
       },
       "id": 4
     },
@@ -66,14 +69,58 @@
         "w32"
       ],
       "color": [
-        "#971E34"
+        "#971E34",
+        "#24426A"
       ],
       "price": 200,
       "discount": 1,
       "images": {
-        "#971E34": "qwe"
+        "#971E34": "https://robohash.org/aaak",
+        "#24426A": "https://robohash.org/aaaks"
       },
       "id": 5
+    }
+  ],
+  "basket": [
+    {
+      "name": "asdasd",
+      "price": 100,
+      "color": "#73513C",
+      "size": "w32",
+      "quantity": 2,
+      "image": "https://robohash.org/a",
+      "productCode": "test10",
+      "id": 1
+    },
+    {
+      "name": "qwe;",
+      "price": 1002,
+      "color": "#73513C",
+      "size": null,
+      "quantity": 1,
+      "image": "https://robohash.org/aaaa",
+      "productCode": "test3",
+      "id": 2
+    },
+    {
+      "name": "qwe;",
+      "price": 1002,
+      "color": "#73513C",
+      "size": null,
+      "quantity": 2,
+      "image": "https://robohash.org/aaaa",
+      "productCode": "test3",
+      "id": 3
+    },
+    {
+      "name": "qwe;",
+      "price": 1002,
+      "color": "#73513C",
+      "size": null,
+      "quantity": 1,
+      "image": "https://robohash.org/aaaa",
+      "productCode": "test3",
+      "id": 4
     }
   ]
 }

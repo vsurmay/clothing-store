@@ -5,6 +5,7 @@ import {
   GET_PRODUCTS,
 } from "../types/products";
 import axios from "axios";
+import { LOADER } from "../types/loader";
 
 const URL = "http://localhost:3004/products";
 
@@ -21,12 +22,24 @@ export const adedProducts = (product) => {
 
 export const getProducts = () => {
   return (dispatch) => {
-    axios.get(URL).then((response) =>
-      dispatch({
-        type: GET_PRODUCTS,
-        payload: response.data,
-      })
-    );
+    dispatch({
+      type: LOADER,
+      payload: true,
+    });
+    axios
+      .get(URL)
+      .then((response) =>
+        dispatch({
+          type: GET_PRODUCTS,
+          payload: response.data,
+        })
+      )
+      .then(() =>
+        dispatch({
+          type: LOADER,
+          payload: false,
+        })
+      );
   };
 };
 
