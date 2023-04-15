@@ -1,8 +1,15 @@
-import { Image } from "antd";
+import { Image, InputNumber } from "antd";
 import React from "react";
 import classes from "./TableBasket.module.scss";
+import { useDispatch } from "react-redux/es/exports";
+import {
+  deletProductBasket,
+  editProductBasket,
+} from "../../redux/actions/basketAction";
 
 const TableBasket = ({ products }) => {
+  const dispatch = useDispatch();
+
   return (
     <div className={classes.wrapper}>
       <div className={`${classes.product} ${classes.item}`}>
@@ -50,11 +57,48 @@ const TableBasket = ({ products }) => {
       </div>
       <div className={`${classes.quantity} ${classes.item}`}>
         <h4 className={classes.title}>quantity</h4>
+        <ul className={classes.list}>
+          {products.map((product) => (
+            <li className={classes.listItem} key={product.id}>
+              <InputNumber
+                onChange={(e) => {
+                  console.log({ ...product, quantity: e });
+                  dispatch(
+                    editProductBasket({ ...product, quantity: Number(e) })
+                  );
+                }}
+                defaultValue={product.quantity}
+                min={1}
+              />
+            </li>
+          ))}
+        </ul>
       </div>
       <div className={`${classes.total} ${classes.item}`}>
         <h4 className={classes.title}>total</h4>
+        <ul className={classes.list}>
+          {products.map((product) => (
+            <li className={classes.listItem} key={product.id}>
+              {(product.quantity * product.price).toFixed(2) + " EUR"}
+            </li>
+          ))}
+        </ul>
       </div>
-      <div className={`${classes.action} ${classes.item}`}></div>
+      <div className={`${classes.action} ${classes.item}`}>
+        <ul className={`${classes.list} ${classes.listActives}`}>
+          {products.map((product) => (
+            <li className={classes.listItem} key={product.id}>
+              <button
+                onClick={() => {
+                  dispatch(deletProductBasket(product));
+                }}
+              >
+                Delete
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

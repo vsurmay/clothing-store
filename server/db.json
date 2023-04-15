@@ -24,103 +24,104 @@
       "id": 1
     },
     {
-      "name": "qwe;",
-      "productCode": "test3",
+      "name": "AHS dsjfsd dsjfldsjf sdjfldsf",
+      "productCode": "asdasdd",
       "size": [
-        "w32"
+        "w26",
+        "w32",
+        "w40",
+        "w27",
+        "w33",
+        "w42"
       ],
       "color": [
-        "#73513C",
-        "#F3ECE2",
-        "#CBA13E"
+        "#18574A",
+        "#CBA13E",
+        "#DAB1B1"
       ],
-      "price": 1002,
+      "price": 123,
       "discount": 1,
       "images": {
-        "#73513C": "https://robohash.org/aaaa",
-        "#F3ECE2": "https://robohash.org/aaaf",
-        "#CBA13E": "https://robohash.org/aaaas"
+        "#18574A": "https://robohash.org/aaaa",
+        "#CBA13E": "https://robohash.org/aaas",
+        "#DAB1B1": "https://robohash.org/aaaf"
       },
-      "id": 3
+      "id": 2
     },
     {
-      "name": "asdasd",
-      "productCode": "test10",
+      "name": "s;fks;lf sdfk  sdfkJJLASDJ dsljfJFDSLF",
+      "productCode": "asdadfdv",
       "size": [
-        "w32",
-        "w33"
+        "w26",
+        "osfa",
+        "w31",
+        "w38"
       ],
       "color": [
+        "#292A2D",
         "#F3ECE2",
-        "#73513C"
-      ],
-      "price": 100,
-      "discount": 2,
-      "images": {
-        "#F3ECE2": "https://robohash.org/aa",
-        "#73513C": "https://robohash.org/a"
-      },
-      "id": 4
-    },
-    {
-      "name": "Test Navigate",
-      "productCode": "RMX1001",
-      "size": [
-        "w32"
-      ],
-      "color": [
-        "#971E34",
         "#24426A"
       ],
-      "price": 200,
-      "discount": 1,
+      "price": 1123,
+      "discount": 2,
       "images": {
-        "#971E34": "https://robohash.org/aaak",
-        "#24426A": "https://robohash.org/aaaks"
+        "#292A2D": "https://robohash.org/aaaaa",
+        "#F3ECE2": "https://robohash.org/aaad",
+        "#24426A": "https://robohash.org/aaagd"
       },
-      "id": 5
+      "id": 3
     }
   ],
   "basket": [
     {
-      "name": "asdasd",
-      "price": 100,
-      "color": "#73513C",
-      "size": "w32",
-      "quantity": 2,
-      "image": "https://robohash.org/a",
-      "productCode": "test10",
-      "id": 1
-    },
-    {
-      "name": "qwe;",
-      "price": 1002,
-      "color": "#73513C",
-      "size": null,
+      "name": "s;fks;lf sdfk  sdfkJJLASDJ dsljfJFDSLF",
+      "price": 1123,
+      "color": "#292A2D",
+      "size": "w26",
       "quantity": 1,
-      "image": "https://robohash.org/aaaa",
-      "productCode": "test3",
-      "id": 2
+      "image": "https://robohash.org/aaaaa",
+      "productCode": "asdadfdv",
+      "id": 5
     },
     {
-      "name": "qwe;",
-      "price": 1002,
-      "color": "#73513C",
-      "size": null,
-      "quantity": 2,
-      "image": "https://robohash.org/aaaa",
-      "productCode": "test3",
-      "id": 3
+      "name": "s;fks;lf sdfk  sdfkJJLASDJ dsljfJFDSLF",
+      "price": 1123,
+      "color": "#F3ECE2",
+      "size": "w26",
+      "quantity": 3,
+      "image": "https://robohash.org/aaad",
+      "productCode": "asdadfdv",
+      "id": 6
     },
     {
-      "name": "qwe;",
-      "price": 1002,
-      "color": "#73513C",
-      "size": null,
+      "name": "s;fks;lf sdfk  sdfkJJLASDJ dsljfJFDSLF",
+      "price": 1123,
+      "color": "#292A2D",
+      "size": "w26",
       "quantity": 1,
+      "image": "https://robohash.org/aaaaa",
+      "productCode": "asdadfdv",
+      "id": 8
+    },
+    {
+      "name": "s;fks;lf sdfk  sdfkJJLASDJ dsljfJFDSLF",
+      "price": 1123,
+      "color": "#292A2D",
+      "size": "w26",
+      "quantity": 2,
+      "image": "https://robohash.org/aaaaa",
+      "productCode": "asdadfdv",
+      "id": 9
+    },
+    {
+      "name": "AHS dsjfsd dsjfldsjf sdjfldsf",
+      "price": 123,
+      "color": "#18574A",
+      "size": "w26",
+      "quantity": 3,
       "image": "https://robohash.org/aaaa",
-      "productCode": "test3",
-      "id": 4
+      "productCode": "asdasdd",
+      "id": 10
     }
   ]
 }

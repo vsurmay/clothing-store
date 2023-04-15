@@ -22,23 +22,23 @@ const basketReducer = (state = defaultValues, action) => {
     case ADED_PRODUCT_BASKET:
       return { ...state, data: [...state.data, action.payload] };
 
-    // case EDIT_PRODUCT_BASKET:
-    //   return {
-    //     ...state,
-    //     data: state.data.map((product) => {
-    //       if (product.id === payload.id) {
-    //         return payload.data;
-    //       } else {
-    //         return product;
-    //       }
-    //     }),
-    //   };
+    case EDIT_PRODUCT_BASKET:
+      return {
+        ...state,
+        data: state.data.map((product) => {
+          if (product.id === action.payload.id) {
+            return action.payload;
+          } else {
+            return product;
+          }
+        }),
+      };
 
-    // case DELETE_PRODUCT_BASKET:
-    //   return {
-    //     ...state,
-    //     data: state.data.filter((product) => product.id !== payload.id),
-    //   };
+    case DELETE_PRODUCT_BASKET:
+      return {
+        ...state,
+        data: state.data.filter((product) => product.id !== action.payload),
+      };
     default:
       return state;
   }

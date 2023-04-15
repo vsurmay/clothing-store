@@ -10,7 +10,7 @@ import { InputNumber, Image } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import { adedProductBasket } from "../../redux/actions/basketAction";
 import { useParams } from "react-router-dom";
-import { Button, message, Space } from "antd";
+import { message } from "antd";
 
 const ProductPage = () => {
   const dispatch = useDispatch();
@@ -24,9 +24,11 @@ const ProductPage = () => {
   const [activeColor, setActiveColor] = useState(
     !!product && !loader ? product.color[0] : null
   );
-  const [activeSize, setActiveSize] = useState(null);
-  const [quantityProduct, setQuantityProduct] = useState(1);
+  const [activeSize, setActiveSize] = useState(
+    !!product && !loader ? product.size[0] : null
+  );
 
+  const [quantityProduct, setQuantityProduct] = useState(1);
   const [messageApi, contextHolder] = message.useMessage();
 
   const success = () => {
@@ -48,8 +50,9 @@ const ProductPage = () => {
     };
     dispatch(adedProductBasket(result));
     success();
-    console.log(result);
   };
+
+  console.log(product.images[activeColor]);
 
   return (
     <>

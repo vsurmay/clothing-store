@@ -11,14 +11,14 @@ import ProductCard from "./components/ProductCard/ProductCard";
 import ProductPage from "./pages/ProductPage/ProductPage";
 import PickSize from "./components/PickSize/PickSize";
 import { Outlet, Link } from "react-router-dom";
-import { GetProductsBasket } from "./redux/actions/basketAction";
+import { getProductsBasket } from "./redux/actions/basketAction";
 
 function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getProducts());
-    dispatch(GetProductsBasket());
+    dispatch(getProductsBasket());
   }, []);
 
   return (

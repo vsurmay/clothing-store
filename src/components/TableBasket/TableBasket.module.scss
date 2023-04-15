@@ -55,21 +55,24 @@
 
 .productWrapper {
     display: flex;
+    justify-content: flex-start !important;
     gap: 18px;
 }
 
 .productContent {
+    max-width: 189px;
     display: flex;
     flex-direction: column;
-    gap: 13px;
+    gap: 10px;
 }
 
 .productTitle {
     font-family: 'Oswald', sans-serif;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
+    white-space: normal;
 }
 
 .list {
@@ -88,4 +91,8 @@
     font-weight: 700;
     white-space: nowrap;
     text-transform: uppercase;
+}
+
+.listActives {
+    margin-top: 60px;
 }
