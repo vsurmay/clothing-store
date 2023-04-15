@@ -1,6 +1,27 @@
 .wrapper {
     display: flex;
-    flex: 0 1 883px;
+    max-width: 883px;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #C4C4C4;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #C4C4C4;
+    }
 }
 
 .item {
@@ -95,4 +116,11 @@
 
 .listActives {
     margin-top: 60px;
+}
+
+.btns {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

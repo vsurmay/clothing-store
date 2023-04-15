@@ -81,47 +81,63 @@
       "quantity": 1,
       "image": "https://robohash.org/aaaaa",
       "productCode": "asdadfdv",
-      "id": 5
+      "uniqueCode": "s;fks;lf sdfk  sdfkJJLASDJ dsljfJFDSLF#292A2Dw26",
+      "id": 1
+    },
+    {
+      "name": "s;fks;lf sdfk  sdfkJJLASDJ dsljfJFDSLF",
+      "price": 1123,
+      "color": "#24426A",
+      "size": "w26",
+      "quantity": 1,
+      "image": "https://robohash.org/aaagd",
+      "productCode": "asdadfdv",
+      "uniqueCode": "s;fks;lf sdfk  sdfkJJLASDJ dsljfJFDSLF#24426Aw26",
+      "id": 2
+    },
+    {
+      "name": "s;fks;lf sdfk  sdfkJJLASDJ dsljfJFDSLF",
+      "price": 1123,
+      "color": "#292A2D",
+      "size": "osfa",
+      "quantity": 1,
+      "image": "https://robohash.org/aaaaa",
+      "productCode": "asdadfdv",
+      "uniqueCode": "s;fks;lf sdfk  sdfkJJLASDJ dsljfJFDSLF#292A2Dosfa",
+      "id": 3
+    },
+    {
+      "name": "s;fks;lf sdfk  sdfkJJLASDJ dsljfJFDSLF",
+      "price": 1123,
+      "color": "#24426A",
+      "size": "osfa",
+      "quantity": 1,
+      "image": "https://robohash.org/aaagd",
+      "productCode": "asdadfdv",
+      "uniqueCode": "s;fks;lf sdfk  sdfkJJLASDJ dsljfJFDSLF#24426Aosfa",
+      "id": 4
     },
     {
       "name": "s;fks;lf sdfk  sdfkJJLASDJ dsljfJFDSLF",
       "price": 1123,
       "color": "#F3ECE2",
       "size": "w26",
-      "quantity": 3,
+      "quantity": 1,
       "image": "https://robohash.org/aaad",
       "productCode": "asdadfdv",
-      "id": 6
+      "uniqueCode": "s;fks;lf sdfk  sdfkJJLASDJ dsljfJFDSLF#F3ECE2w26",
+      "id": 5
     },
     {
       "name": "s;fks;lf sdfk  sdfkJJLASDJ dsljfJFDSLF",
       "price": 1123,
-      "color": "#292A2D",
-      "size": "w26",
+      "color": "#F3ECE2",
+      "size": "osfa",
       "quantity": 1,
-      "image": "https://robohash.org/aaaaa",
+      "image": "https://robohash.org/aaad",
       "productCode": "asdadfdv",
-      "id": 8
-    },
-    {
-      "name": "s;fks;lf sdfk  sdfkJJLASDJ dsljfJFDSLF",
-      "price": 1123,
-      "color": "#292A2D",
-      "size": "w26",
-      "quantity": 2,
-      "image": "https://robohash.org/aaaaa",
-      "productCode": "asdadfdv",
-      "id": 9
-    },
-    {
-      "name": "AHS dsjfsd dsjfldsjf sdjfldsf",
-      "price": 123,
-      "color": "#18574A",
-      "size": "w26",
-      "quantity": 3,
-      "image": "https://robohash.org/aaaa",
-      "productCode": "asdasdd",
-      "id": 10
+      "uniqueCode": "s;fks;lf sdfk  sdfkJJLASDJ dsljfJFDSLF#F3ECE2osfa",
+      "id": 6
     }
   ]
 }

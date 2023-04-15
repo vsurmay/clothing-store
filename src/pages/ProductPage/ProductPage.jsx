@@ -21,6 +21,10 @@ const ProductPage = () => {
     state.products.data.find((product) => product.id === Number(productId))
   );
 
+  const allProductsBasketUniqueCodes = useSelector((state) =>
+    state.basket.data.map((product) => product.uniqueCode)
+  );
+
   const [activeColor, setActiveColor] = useState(
     !!product && !loader ? product.color[0] : null
   );
@@ -38,21 +42,35 @@ const ProductPage = () => {
     });
   };
 
-  const onSubmit = () => {
-    const result = {
-      name: product.name,
-      price: product.price,
-      color: activeColor,
-      size: activeSize,
-      quantity: quantityProduct,
-      image: product.images[activeColor],
-      productCode: product.productCode,
-    };
-    dispatch(adedProductBasket(result));
-    success();
+  const error = () => {
+    messageApi.open({
+      type: "error",
+      content: "This is an error message",
+    });
   };
 
-  console.log(product.images[activeColor]);
+  const onSubmit = () => {
+    const newUniqueCode = product.name + activeColor + activeSize;
+    console.log(newUniqueCode);
+    if (allProductsBasketUniqueCodes.includes(newUniqueCode)) {
+      console.log("Помилка");
+      error();
+    } else {
+      console.log("Успіх");
+      const basketItem = {
+        name: product.name,
+        price: product.price,
+        color: activeColor,
+        size: activeSize,
+        quantity: quantityProduct,
+        image: product.images[activeColor],
+        productCode: product.productCode,
+        uniqueCode: newUniqueCode,
+      };
+      dispatch(adedProductBasket(basketItem));
+      success();
+    }
+  };
 
   return (
     <>
@@ -73,7 +91,7 @@ const ProductPage = () => {
                 colors={product.color}
               />
               <p className={classes.subtitle}>
-                Select size (Inches)<a href="#">Size guide</a>
+                Select size (Inches)<span>Size guide</span>
               </p>
               <PickSize
                 availableSizes={product.size}

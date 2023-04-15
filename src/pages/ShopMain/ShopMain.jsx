@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import ProductCard from "../../components/ProductCard/ProductCard";
 
@@ -10,9 +9,7 @@ const ShopMain = () => {
       <div>
         <div style={{ display: "flex" }}>
           {products.map((product) => (
-            <Link to={`product/${product.id}`} key={product.id}>
-              <ProductCard data={product} />
-            </Link>
+            <ProductCard key={product.id} data={product} />
           ))}
         </div>
       </div>
