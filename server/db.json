@@ -2,165 +2,103 @@
   "products": [
     {
       "name": "Test",
-      "productCode": "RMX100",
+      "productCode": "asda",
+      "category": "Top women",
       "size": [
-        "w26",
-        "w40"
+        "osfa",
+        "w31"
       ],
       "color": [
-        "#971E34",
-        "#CBA13E",
-        "#DAB1B1",
-        "#24426A"
+        "#292A2D",
+        "#73513C",
+        "#DAB1B1"
       ],
-      "price": 100,
+      "price": 130924,
       "discount": 2,
       "images": {
-        "#971E34": "https://robohash.org/aaa",
-        "#CBA13E": "https://robohash.org/abba",
-        "#DAB1B1": "https://robohash.org/abbaa",
-        "#24426A": "asd"
+        "#292A2D": "https://robohash.org/asd",
+        "#73513C": "https://robohash.org/asda",
+        "#DAB1B1": "https://robohash.org/asdf"
       },
       "id": 1
     },
     {
-      "name": "AHS dsjfsd dsjfldsjf sdjfldsf",
-      "productCode": "asdasdd",
+      "name": "test",
+      "productCode": "test",
+      "category": "Collection: spring",
       "size": [
-        "w26",
-        "w32",
-        "w40",
-        "w27",
-        "w33",
-        "w42"
+        "osfa",
+        "w31"
       ],
       "color": [
-        "#18574A",
-        "#CBA13E",
-        "#DAB1B1"
+        "#292A2D"
       ],
-      "price": 123,
-      "discount": 1,
+      "price": 11,
+      "discount": 2,
       "images": {
-        "#18574A": "https://robohash.org/aaaa",
-        "#CBA13E": "https://robohash.org/aaas",
-        "#DAB1B1": "https://robohash.org/aaaf"
+        "#292A2D": "https://robohash.org/asdad"
       },
       "id": 2
     },
     {
-      "name": "s;fks;lf sdfk  sdfkJJLASDJ dsljfJFDSLF",
-      "productCode": "asdadfdv",
+      "name": "Nodissc",
+      "productCode": "afsaf",
+      "category": "New arivals",
       "size": [
-        "w26",
-        "osfa",
-        "w31",
-        "w38"
+        "w27",
+        "w33"
       ],
       "color": [
-        "#292A2D",
-        "#F3ECE2",
-        "#24426A"
+        "#F3ECE2"
       ],
-      "price": 1123,
-      "discount": 2,
+      "price": 1000,
+      "discount": 0,
       "images": {
-        "#292A2D": "https://robohash.org/aaaaa",
-        "#F3ECE2": "https://robohash.org/aaad",
-        "#24426A": "https://robohash.org/aaagd"
+        "#F3ECE2": " https://robohash.org/asd"
       },
       "id": 3
     },
     {
-      "name": "Test discount",
-      "productCode": "jafljlc",
+      "name": "Disk",
+      "productCode": "asfsf",
+      "category": "Collection: spring",
       "size": [
-        "osfa",
-        "w31",
-        "w38",
-        "w50"
+        "w26",
+        "w32"
       ],
       "color": [
-        "#292A2D",
-        "#971E34",
-        "#CBA13E"
+        "#24426A"
       ],
-      "price": 771,
-      "discount": 0,
+      "price": 1000,
+      "discount": 2,
       "images": {
-        "#292A2D": " https://robohash.org/asd",
-        "#971E34": " https://robohash.org/asda",
-        "#CBA13E": " https://robohash.org/asda"
+        "#24426A": " https://robohash.org/asd"
       },
       "id": 4
     }
   ],
   "basket": [
     {
-      "name": "s;fks;lf sdfk  sdfkJJLASDJ dsljfJFDSLF",
-      "price": 1123,
-      "color": "#292A2D",
-      "size": "w26",
-      "quantity": 1,
-      "image": "https://robohash.org/aaaaa",
-      "productCode": "asdadfdv",
-      "uniqueCode": "s;fks;lf sdfk  sdfkJJLASDJ dsljfJFDSLF#292A2Dw26",
+      "name": "Nodissc",
+      "price": 1000,
+      "color": "#F3ECE2",
+      "size": "w27",
+      "quantity": 2,
+      "image": " https://robohash.org/asd",
+      "productCode": "afsaf",
+      "uniqueCode": "Nodissc#F3ECE2w27",
       "id": 1
     },
     {
-      "name": "s;fks;lf sdfk  sdfkJJLASDJ dsljfJFDSLF",
-      "price": 1123,
-      "color": "#24426A",
-      "size": "w26",
-      "quantity": 1,
-      "image": "https://robohash.org/aaagd",
-      "productCode": "asdadfdv",
-      "uniqueCode": "s;fks;lf sdfk  sdfkJJLASDJ dsljfJFDSLF#24426Aw26",
-      "id": 2
-    },
-    {
-      "name": "s;fks;lf sdfk  sdfkJJLASDJ dsljfJFDSLF",
-      "price": 1123,
+      "name": "test",
+      "price": 10.78,
       "color": "#292A2D",
       "size": "osfa",
       "quantity": 1,
-      "image": "https://robohash.org/aaaaa",
-      "productCode": "asdadfdv",
-      "uniqueCode": "s;fks;lf sdfk  sdfkJJLASDJ dsljfJFDSLF#292A2Dosfa",
-      "id": 3
-    },
-    {
-      "name": "s;fks;lf sdfk  sdfkJJLASDJ dsljfJFDSLF",
-      "price": 1123,
-      "color": "#24426A",
-      "size": "osfa",
-      "quantity": 1,
-      "image": "https://robohash.org/aaagd",
-      "productCode": "asdadfdv",
-      "uniqueCode": "s;fks;lf sdfk  sdfkJJLASDJ dsljfJFDSLF#24426Aosfa",
-      "id": 4
-    },
-    {
-      "name": "s;fks;lf sdfk  sdfkJJLASDJ dsljfJFDSLF",
-      "price": 1123,
-      "color": "#F3ECE2",
-      "size": "w26",
-      "quantity": 1,
-      "image": "https://robohash.org/aaad",
-      "productCode": "asdadfdv",
-      "uniqueCode": "s;fks;lf sdfk  sdfkJJLASDJ dsljfJFDSLF#F3ECE2w26",
-      "id": 5
-    },
-    {
-      "name": "s;fks;lf sdfk  sdfkJJLASDJ dsljfJFDSLF",
-      "price": 1123,
-      "color": "#F3ECE2",
-      "size": "osfa",
-      "quantity": 1,
-      "image": "https://robohash.org/aaad",
-      "productCode": "asdadfdv",
-      "uniqueCode": "s;fks;lf sdfk  sdfkJJLASDJ dsljfJFDSLF#F3ECE2osfa",
-      "id": 6
+      "image": "https://robohash.org/asdad",
+      "productCode": "test",
+      "uniqueCode": "test#292A2Dosfa",
+      "id": 2
     }
   ]
 }

@@ -17,13 +17,10 @@ const Slider = () => {
     textAlign: "center",
     background: "#364d79",
   };
-  const onChange = (currentSlide) => {
-    console.log(currentSlide);
-  };
 
   const prevArrow = <img src={LeftArrow} alt={"Arrow left"} />;
   const nextArrow = <img src={RightArrow} alt={"Arrow right"} />;
-
+  const arr = [1, 2, 3, 4];
   return (
     <div className={"slider__section"}>
       <Container>
@@ -32,31 +29,24 @@ const Slider = () => {
           prevArrow={prevArrow}
           nextArrow={nextArrow}
           arrows={true}
-          afterChange={onChange}
+          autoplay
         >
-          <div className="slider">
-            <div className="slider__describtion">
-              <h1 className="slider__describtion-title">
-                SUMMER SALE GEt{" "}
-                <span className="slider__describtion-sale">30% OFF</span> On all
-                dress.
-              </h1>
-              <OutLineButton>Show Now</OutLineButton>
+          {arr.map((el) => (
+            <div key={el} className="slider">
+              <div className="slider__describtion">
+                <h1 className="slider__describtion-title">
+                  SUMMER SALE GEt{" "}
+                  <span className="slider__describtion-sale">30% OFF</span> On
+                  all dress.
+                </h1>
+                <OutLineButton>Show Now</OutLineButton>
+              </div>
+              <div className="slider__images">
+                <Image preview={false} alt="Banner picture" src={silderImg1} />
+                <Image preview={false} alt="Banner picture" src={silderImg2} />
+              </div>
             </div>
-            <div className="slider__images">
-              <Image preview={false} alt="Banner picture" src={silderImg1} />
-              <Image preview={false} alt="Banner picture" src={silderImg2} />
-            </div>
-          </div>
-          <div>
-            <h3 style={contentStyle}>2</h3>
-          </div>
-          <div>
-            <h3 style={contentStyle}>3</h3>
-          </div>
-          <div>
-            <h3 style={contentStyle}>4</h3>
-          </div>
+          ))}
         </Carousel>
       </Container>
     </div>

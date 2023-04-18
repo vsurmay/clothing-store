@@ -38,6 +38,17 @@
     text-transform: uppercase;
 }
 
+.newPrice {
+    color: #EB5757;
+}
+
+.oldPrice {
+    color: #828282;
+    font-size: 18px;
+    margin-left: 15px;
+    text-decoration: line-through;
+}
+
 .btns {
     margin-top: 36px;
     display: flex;

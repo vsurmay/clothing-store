@@ -8,20 +8,16 @@ const EditProduct = () => {
 
   const loader = useSelector((state) => state.loader.loader);
   const currentProduct = useSelector((state) => {
-    console.log(state);
     return state.products.data.find(
       (product) => product.id === Number(productId)
     );
   });
-  console.log(loader);
 
   return (
     <>
       {loader && currentProduct == undefined ? null : (
         <ProductForm editProduct={currentProduct} />
       )}
-
-      {/*  */}
     </>
   );
 };

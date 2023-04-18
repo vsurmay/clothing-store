@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import classes from "./ProductForm.module.scss";
-import { Checkbox, Form, Input, InputNumber, message } from "antd";
+import { Checkbox, Form, Input, InputNumber, message, Select } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import {
   adedProducts,
@@ -21,9 +21,9 @@ const ProductForm = ({ add, editProduct }) => {
     state.products.data.map((product) => product.productCode)
   );
 
-  useEffect(() => {
-    dispatch(getProducts());
-  }, []);
+  // useEffect(() => {
+  //   dispatch(getProducts());
+  // }, [dispatch]);
 
   // useEffect(() => {
   //   if (editProduct) {
@@ -66,6 +66,7 @@ const ProductForm = ({ add, editProduct }) => {
   };
 
   const onFinish = (values) => {
+    console.log(values);
     if (add) {
       success("The product was added successfully");
       dispatch(adedProducts(values));
@@ -125,6 +126,29 @@ const ProductForm = ({ add, editProduct }) => {
           ]}
         >
           <Input />
+        </Form.Item>
+
+        <Form.Item
+          label="Category"
+          name="category"
+          rules={[
+            {
+              required: true,
+              message: "Please select category",
+            },
+          ]}
+        >
+          <Select
+            style={{ width: 120 }}
+            options={[
+              { value: "Best sellers", label: "Best sellers" },
+              { value: "Top women", label: "Top women" },
+              { value: "New arivals", label: "New arivals" },
+              { value: "Collection: summer", label: "Collection: summer" },
+              { value: "Collection: spring", label: "Collection: spring" },
+              { value: "Trending", label: "Trending" },
+            ]}
+          />
         </Form.Item>
 
         <Form.Item
@@ -223,19 +247,6 @@ const ProductForm = ({ add, editProduct }) => {
         >
           <InputNumber addonBefore={"%"} min={0} max={100} />
         </Form.Item>
-
-        {/* <Form.Item
-        label="Image"
-        name="image"
-        rules={[
-          {
-            required: true,
-            message: "Please input image!",
-          },
-        ]}
-      >
-        <Input addonBefore={"Url"} />
-      </Form.Item> */}
 
         <Form.Item
           wrapperCol={{

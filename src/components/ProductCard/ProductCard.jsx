@@ -7,10 +7,8 @@ import { Link } from "react-router-dom";
 const ProductCard = ({ data }) => {
   const [activeColor, setActiveColor] = useState(data.color[0]);
 
-  console.log(data.discount);
   const newPrice = (price, percent) => {
     const result = !percent ? price : price - (price * percent) / 100;
-    console.log(percent);
     return result.toFixed(2) + " EUR";
   };
 
@@ -19,7 +17,7 @@ const ProductCard = ({ data }) => {
     <Link to={`product/${data.id}`}>
       <div className={classes.card}>
         <Image preview={false} width={344} src={data.images[activeColor]} />
-        <p className={classes.variety}>top women</p>
+        <p className={classes.variety}>{data.category}</p>
         <h4 className={classes.name}>{data.name}</h4>
         {data.discount ? (
           <h3 className={`${classes.newPrice} ${classes.price}`}>

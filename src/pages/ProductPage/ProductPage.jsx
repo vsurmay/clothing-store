@@ -21,15 +21,17 @@ const ProductPage = () => {
     state.products.data.find((product) => product.id === Number(productId))
   );
 
+  console.log(product);
+
   const allProductsBasketUniqueCodes = useSelector((state) =>
     state.basket.data.map((product) => product.uniqueCode)
   );
 
   const [activeColor, setActiveColor] = useState(
-    !!product && !loader ? product.color[0] : null
+    product !== undefined && !loader ? product.color[0] : null
   );
   const [activeSize, setActiveSize] = useState(
-    !!product && !loader ? product.size[0] : null
+    product !== undefined && !loader ? product.size[0] : null
   );
 
   const [quantityProduct, setQuantityProduct] = useState(1);
@@ -45,7 +47,7 @@ const ProductPage = () => {
   const error = () => {
     messageApi.open({
       type: "error",
-      content: "This is an error message",
+      content: "Sorry but the product is basket",
     });
   };
 
@@ -53,13 +55,11 @@ const ProductPage = () => {
     const newUniqueCode = product.name + activeColor + activeSize;
     console.log(newUniqueCode);
     if (allProductsBasketUniqueCodes.includes(newUniqueCode)) {
-      console.log("Помилка");
       error();
     } else {
-      console.log("Успіх");
       const basketItem = {
         name: product.name,
-        price: product.price,
+        price: newPrice(product.price, product.discount),
         color: activeColor,
         size: activeSize,
         quantity: quantityProduct,
@@ -70,6 +70,11 @@ const ProductPage = () => {
       dispatch(adedProductBasket(basketItem));
       success();
     }
+  };
+
+  const newPrice = (price, percent) => {
+    const result = percent === 0 ? price : price - (price * percent) / 100;
+    return result;
   };
 
   return (
@@ -111,9 +116,26 @@ const ProductPage = () => {
                 </div>
                 <div className={classes.price}>
                   <p className={classes.subtitle}>Price total</p>
-                  <p className={classes.priceValue}>
-                    {(quantityProduct * product.price).toFixed(2)} EUR
-                  </p>
+                  {product.discount ? (
+                    <p className={`${classes.priceValue} ${classes.newPrice}`}>
+                      {(
+                        quantityProduct *
+                        newPrice(product.price, product.discount)
+                      ).toFixed(2)}{" "}
+                      EUR{" "}
+                      <span className={classes.oldPrice}>
+                        {(quantityProduct * product.price).toFixed(2)} EUR
+                      </span>
+                    </p>
+                  ) : (
+                    <p className={classes.priceValue}>
+                      {(
+                        quantityProduct *
+                        newPrice(product.price, product.discount)
+                      ).toFixed(2)}{" "}
+                      EUR
+                    </p>
+                  )}
                 </div>
               </div>
               <div className={classes.btns}>

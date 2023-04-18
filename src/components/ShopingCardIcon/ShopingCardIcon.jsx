@@ -18,7 +18,7 @@ const ShopingCardIcon = () => {
         <ShoppingOutlined style={{ fontSize: "20px" }} />
         <div className={classes.describtion}>
           <span className={classes.text}>Shopping Cart</span>
-          <span className={classes.price}>{sumBasket.toFixed(2)} EUR</span>
+          <span className={classes.price}>{sumBasket} EUR</span>
         </div>
       </div>
     </Link>
