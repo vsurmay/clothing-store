@@ -70,6 +70,29 @@
         "#24426A": "https://robohash.org/aaagd"
       },
       "id": 3
+    },
+    {
+      "name": "Test discount",
+      "productCode": "jafljlc",
+      "size": [
+        "osfa",
+        "w31",
+        "w38",
+        "w50"
+      ],
+      "color": [
+        "#292A2D",
+        "#971E34",
+        "#CBA13E"
+      ],
+      "price": 771,
+      "discount": 0,
+      "images": {
+        "#292A2D": " https://robohash.org/asd",
+        "#971E34": " https://robohash.org/asda",
+        "#CBA13E": " https://robohash.org/asda"
+      },
+      "id": 4
     }
   ],
   "basket": [

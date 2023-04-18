@@ -7,6 +7,9 @@ import {
   editProductBasket,
 } from "../../redux/actions/basketAction";
 import { Link } from "react-router-dom";
+import GrayButton from "../UI/Buttons/GrayButton";
+import deleteIcon from "../../img/delete-basket.svg";
+import heardIcon from "../../img/heard-basket.svg";
 
 const TableBasket = ({ products }) => {
   const dispatch = useDispatch();
@@ -93,13 +96,20 @@ const TableBasket = ({ products }) => {
         <div className={`${classes.action} ${classes.item}`}>
           <ul className={`${classes.list} ${classes.listActives}`}>
             {products.map((product) => (
-              <li className={classes.listItem} key={product.id}>
+              <li
+                style={{ gap: "10px" }}
+                className={classes.listItem}
+                key={product.id}
+              >
+                <button>
+                  <img src={heardIcon} />
+                </button>
                 <button
                   onClick={() => {
                     dispatch(deletProductBasket(product));
                   }}
                 >
-                  Delete
+                  <img src={deleteIcon} />
                 </button>
               </li>
             ))}
@@ -108,10 +118,10 @@ const TableBasket = ({ products }) => {
       </div>
       <div className={classes.btns}>
         <Link to={"/shop"}>
-          <button>Continue Shop</button>
+          <GrayButton>Continue Shop</GrayButton>
         </Link>
 
-        <button onClick={deleteAllProduct}>Delete All</button>
+        <GrayButton onClick={deleteAllProduct}>Delete All</GrayButton>
       </div>
     </div>
   );
